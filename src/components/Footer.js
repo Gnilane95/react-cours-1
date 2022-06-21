@@ -1,10 +1,21 @@
 import React from 'react'
 import styled from "styled-components"
+import {useLocation } from "react-router-dom";
 
 export default function Footer() {
+  let currentPage = useLocation();
+  console.log(currentPage.pathname);
+  let bgColor = "";
+  if (currentPage.pathname == "/") {
+    bgColor = "#f00";
+  } else if (currentPage.pathname == "/steve") {
+    bgColor = "#0d6efd";
+  } else {
+    bgColor = "#ffcd41";
+  }
   return (
     <div>
-      <Footercontainer>
+      <Footercontainer className="" style={{ backgroundColor: bgColor }}>
         <h1>Mon joli footer</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in
@@ -23,6 +34,6 @@ const Footercontainer = styled.footer`
   background-color: #0d6efd;
   color: #fff ;
   text-align: center;
-  padding: 2% 10%;
-  margin-top: 22%;
+  padding: 1% 10%;
+  margin-top: 0;
 `;

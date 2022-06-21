@@ -1,15 +1,25 @@
 import React from "react"
-import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import Navigation from "./components/Navigation";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Emily from "./pages/Emily";
+import Steve from "./pages/Steve";
+import Elon from "./pages/Elon";
+import Error from "./pages/Error";
+
 
 function App() {
   return (
-    <div>
-      <header>
-        <Navigation />
-      </header>
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Emily />} />
+        <Route path="/steve" element={<Steve />} />
+        <Route path="/elon" element={<Elon />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
