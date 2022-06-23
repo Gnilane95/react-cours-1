@@ -16,15 +16,11 @@ export default function Footer() {
   return (
     <div>
       <Footercontainer className="" style={{ backgroundColor: bgColor }}>
-        <h1>Mon joli footer</h1>
+        <h1 className=''>Mon joli footer</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in
           suscipit mauris. Ut aliquet lorem ut est volutpat tincidunt. Etiam
-          pretium enim in nisl pellentesque, vitae semper nibh sodales. Sed ante
-          ligula, suscipit sed dapibus in, condimentum id lacus. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Nunc quis mattis augue.
-          Aenean a augue feugiat, suscipit elit quis, auctor libero. Etiam
-          auctor quis risus id efficitur. Suspendisse porta ullamcorper gravida.
+          pretium enim in nisl pellentesque, vitae semper nibh sodales.
         </p>
       </Footercontainer>
     </div>
@@ -36,4 +32,7 @@ const Footercontainer = styled.footer`
   text-align: center;
   padding: 1% 10%;
   margin-top: 0;
+  h1{
+    font-size: 30px;
+  }
 `;

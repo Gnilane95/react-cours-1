@@ -19,6 +19,11 @@ export default function Navigation() {
       name: "Elon",
       slug: "/elon",
       id: 3,
+    },
+    {
+      name: "Cours",
+      slug: "/cours",
+      id: 4,
     }
   ];
   let currentPage = useLocation ();
